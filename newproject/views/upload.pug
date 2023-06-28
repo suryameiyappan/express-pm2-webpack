@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= "File Upload"
+  form#form(enctype='multipart/form-data' ,action='', method='post')
+    input(type='file', name='myfile' id='myfile')
+    br
+    br
+    input(type='submit',id='upload', value='Upload Image', name='submit')
+    br
+    br
+    p#response
+    a#url
+    img#myImage(src='' alt='url' width='1200' height='600')

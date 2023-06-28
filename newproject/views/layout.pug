@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+  if metaData.title && metaData.description
+    - const pageTitle = metaData.title;
+    - const metaDescription = metaData.description;
+    title #{pageTitle}
+    meta(itemprop="name" content=pageTitle)
+    meta(itemprop="description" content=metaDescription)
+    meta(name="description" content=metaDescription)
+  link(rel='stylesheet', href=utils.assetPath('home.css'))
+  link(rel='manifest' href='/bundle/manifest.json')
+  body
+    block content
+  block script
+    script(src=utils.assetPath('vendor.js'))
+    script(src=utils.assetPath('home.js'))

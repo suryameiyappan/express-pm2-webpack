@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= ''
+  form(action="/" method="post")
+  | En
+  br
+  textarea(rows="7" cols="60" id="english" name="english")
+  br
+  | Ta
+  br
+  textarea(rows="7" cols="60" id="tamil" name="tamil")
+    | 
+  br
+  br
+  div.button-row
+  input#clickId(type="button" value="submit")
+  input#clickClear(type="button" value="Clear")
